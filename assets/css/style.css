@@ -192,13 +192,48 @@ header .social-menu a {
 /*=================================
   banner section styling starts here
 =================================*/ 
+.banner .wrapper {
+  width: 100%;
+  text-align: center;
+}
 
+h2{
+  padding: 27px 0; 
+  background-color: #609;
+  color: #fff;
+  font: bold 40px 'sans-serif'; 
+  word-spacing: -7px;
+}
 
+.banner .slide {
+  position: relative;
+}
 
+h2 span::first-letter { text-transform: capitalize;}
 
+.banner .uppercase::first-letter {
+  text-transform: capitalize;
+}
 
+.slide-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  width: 83%;
+}
 
+.slide-content p {
+  font:bold 25px 'sans-serif';
+}
 
+.slide-contentspan {
+  font: normal 18px 'sans-serif';
+  letter-spacing: 2px;
+  margin-top: 17px;
+  display: block;
+}
 /*=================================
   banner section styling ends here
 =================================*/ 
