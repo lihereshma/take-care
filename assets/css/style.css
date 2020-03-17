@@ -205,7 +205,6 @@ header .social-menu a {
 /*=================================
   Header styling ends here
 =================================*/  
-
 /*=================================
   main styling starts here
 =================================*/
@@ -214,7 +213,7 @@ header .social-menu a {
 =================================*/ 
 .banner .slide { position: relative; }
 
-.banner .uppercase::first-letter,  h2::first-letter{ text-transform: capitalize; }
+.banner .uppercase::first-letter,  h2::first-letter { text-transform: capitalize; }
 
 .slide-content p { font: bold 25px 'sans-serif'; }
 
@@ -272,7 +271,7 @@ h2 {
 =================================*/ 
 .no-scroll { overflow: hidden; }
 
-.films {  padding: 70px 0 80px; }
+.films { padding: 70px 0 80px; }
 
 .films-list { margin-top: 33px; }
 
@@ -282,7 +281,7 @@ h2 {
 
 .section-head { margin: 0 13%; }
 
-.film ul li{ width: 48%; }
+.film ul li { width: 48%; }
 
 h4::first-letter { text-transform: capitalize; }
 
@@ -344,7 +343,7 @@ h4::first-letter { text-transform: capitalize; }
   cursor: pointer;
 }
 
-.cancel::before{
+.cancel::before {
   content: "\f057";
   float: left;
   color: #fff;
@@ -373,7 +372,6 @@ h4::first-letter { text-transform: capitalize; }
   display: -ms-flexbox;
   display: flex;
 }
-
 
 h3 {
   margin-bottom: 9px;
@@ -472,7 +470,7 @@ footer .wrapper { width: 73%; }
 
 .contact-us { width: 108%;}
 
-.footer-menus ul:last-of-type {margin-left: 75%;}
+.footer-menus ul:last-of-type { margin-left: 75%; }
 
 .footer-top-menus .social-links li { margin-bottom: 8px; }
 
@@ -565,7 +563,7 @@ h6 {
   font: normal 11px 'sans-serif';
 }
 
-footer .facebook::before, footer .youtube::before, footer .twitter::before, .mail a:before{
+footer .facebook::before, footer .youtube::before, footer .twitter::before, .mail a:before {
   padding: 4px 4px 2px;
   border: 1px solid;
   border-radius: 50px;
@@ -681,7 +679,7 @@ footer {
   .video figure:hover:after, .button:hover:before { color: #7c7c7c; }
 
   nav a:hover, header .social-menu a:hover , 
-  footer .footer-top-menus a:hover, .footer-bottom-menus a:hover  { color: #5bf; }
+  footer .footer-top-menus a:hover, .footer-bottom-menus a:hover { color: #5bf; }
 
   .blue-button a:hover {
     -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -939,7 +937,7 @@ footer {
 
   .mail { width: 49%; }
 
-  .footer-bottom-menus ul li { display: block;}
+  .footer-bottom-menus ul li { display: block; }
 
   .footer-bottom-menus {
     -webkit-box-orient: vertical;
