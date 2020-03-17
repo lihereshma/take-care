@@ -381,7 +381,7 @@ h3 {
   text-transform: capitalize;
 }
 
-.films p {
+.films p ,.tool p{
   color: #7c7c7c;
   font: normal 13px 'sans-serif';
   line-height: 20px;
@@ -416,13 +416,37 @@ h4 {
 /*=================================
   tool section styling starts here
 =================================*/ 
+.tool { position: relative; }
 
+.tool .wrapper { width: 100%; }
 
+.tool figure { position: relative; }
 
+.tool figure:before {
+  content: "";
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0; 
+  background-color: rgba(0,0,0,0.7);
+}
 
+.tool-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  text-align: center;  
+  -webkit-transform: translate(-50%, -50%);  
+  -ms-transform: translate(-50%, -50%);  
+  transform: translate(-50%, -50%);
+}
 
-
-
+.tool p{
+  margin-bottom: 27px;
+  color: #fff;  
+}
 /*=================================
   tool section styling ends here
 =================================*/ 
