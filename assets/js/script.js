@@ -1,4 +1,4 @@
-// Function for Navigation sidebar
+// Function for navigation sidebar
 var hamburger = document.querySelector ('.hamburger');
 var nav = document.querySelector ('.menu');
 hamburger.addEventListener ('click',showNav);
