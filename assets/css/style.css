@@ -292,7 +292,7 @@ h4::first-letter { text-transform: capitalize; }
   transition: 0.5s ease; 
 }
 
-.films .wrapper {
+.films .wrapper, .campaign .wrapper {
   width: 47.8%;
   text-align: center;
 }
@@ -381,7 +381,7 @@ h3 {
   text-transform: capitalize;
 }
 
-.films p ,.tool p{
+.films p ,.tool p, .campaign p {
   color: #7c7c7c;
   font: normal 13px 'sans-serif';
   line-height: 20px;
@@ -433,6 +433,7 @@ h4 {
 }
 
 .tool-content {
+  width: 53%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -453,13 +454,9 @@ h4 {
 /*=================================
   campaign section styling starts here
 =================================*/ 
+.campaign .blue-button a { margin-top: 26px; }
 
-
-
-
-
-
-
+.campaign { padding: 74px 0; }
 /*=================================
   campaign section styling ends here
 =================================*/ 
