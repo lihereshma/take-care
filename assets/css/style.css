@@ -214,9 +214,7 @@ header .social-menu a {
 =================================*/ 
 .banner .slide { position: relative; }
 
-h2 span::first-letter { text-transform: capitalize; }
-
-.banner .uppercase::first-letter { text-transform: capitalize; }
+.banner .uppercase::first-letter,  h2::first-letter{ text-transform: capitalize; }
 
 .slide-content p { font: bold 25px 'sans-serif'; }
 
@@ -247,7 +245,8 @@ h2 {
   margin-top: 17px;
   display: block;
   font: normal 18px 'sans-serif';
-  letter-spacing: 1.5px;  
+  letter-spacing: 1.5px; 
+  text-transform: capitalize; 
 }
 
 .slick-dots li.slick-active button:before, .slick-dots li button:before {
@@ -271,10 +270,146 @@ h2 {
 /*=================================
   films section styling starts here
 =================================*/ 
+.no-scroll { overflow: hidden; }
+
+.films {  padding: 70px 0 80px; }
+
+.films-list { margin-top: 33px; }
+
+.click-video { display: none; }
+
+.activeImage { display: block; }
+
+.section-head { margin: 0 13%; }
+
+.film ul li{ width: 48%; }
+
+h4::first-letter { text-transform: capitalize; }
+
+.video figure:before { 
+  -webkit-transition: 0.5s ease; 
+  -o-transition: 0.5s ease; 
+  transition: 0.5s ease; 
+}
+
+.films .wrapper {
+  width: 47.8%;
+  text-align: center;
+}
+
+.video figure { 
+  position:relative; 
+  -webkit-transition: 0.5s ease; 
+  -o-transition: 0.5s ease; 
+  transition: 0.5s ease;
+}
+
+.video figure:after {
+  content: "\f144";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  color: #fff;
+  cursor: pointer;
+  font: normal 70px 'FontAwesome';
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease; 
+}
+
+.lightbox-opened {
+  width:100%;
+  padding: 25px;
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0, 0.8);
+  cursor: pointer;
+}
+
+.cancel {
+  padding: 10px;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-indent: -9999px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.cancel::before{
+  content: "\f057";
+  float: left;
+  color: #fff;
+  font-family: FontAwesome;
+  text-indent: 0;
+  -webkit-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.currentVideo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.film ul {
+  width: 100%;
+  margin-bottom: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 
 
+h3 {
+  margin-bottom: 9px;
+  font: bold 26px 'sans-serif';
+  text-transform: capitalize;
+}
 
+.films p {
+  color: #7c7c7c;
+  font: normal 13px 'sans-serif';
+  line-height: 20px;
+}
 
+h4 {
+  margin-bottom: 10px;
+  font: bold 24px 'sans-serif';
+}
+
+.film-content {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 25px;
+  background-color: #e7e8e8;
+  text-align: left;  
+}
+
+.blue-button a {
+  padding: 10px 2.5%;
+  border-radius: 50px;
+  background-color: #49adf2;
+  color: #fff;
+  text-transform: uppercase;  
+  -webkit-transition: 0.5s ease;  
+  -o-transition: 0.5s ease;  
+  transition: 0.5s ease;
+}
 /*=================================
   films section styling ends here
 =================================*/ 
@@ -304,6 +439,23 @@ h2 {
 
   nav a:hover, header .social-menu a:hover { color: #5bf; }
 
+  .video figure:hover:after { color: #7c7c7c; }
+
+  .video figure:hover:before {
+    content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0; 
+    background-color: rgba(255,255,255,0.5);
+  }
+
+  .button:hover:before { color: #ea4436; }
+
+  .blue-button a:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
 } 
 
 /*media query for 995px starts here*/
