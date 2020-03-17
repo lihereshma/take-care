@@ -110,7 +110,11 @@ li {
 
 header { padding: 16px 0; }
 
-nav a { transition: 0.5s ease; }
+nav a { 
+  -webkit-transition: 0.5s ease; 
+  -o-transition: 0.5s ease; 
+  transition: 0.5s ease; 
+}
 
 .header-right-menus a { color: #bbc; }
 
@@ -128,7 +132,11 @@ header .social-menu .facebook { padding: 4px 5px 1px; }
 
 header .wrapper {
   width: 73%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -145,6 +153,8 @@ header .social-menu a {
   display: inline-block;
   font-size: 11px;
   text-indent: -9999px;  
+  -webkit-transition: 0.5s ease;  
+  -o-transition: 0.5s ease;  
   transition: 0.5s ease;
 }
 
@@ -157,6 +167,8 @@ header .social-menu a {
 .language a {
   font-size: 9.9px;
   text-transform: capitalize; 
+  -webkit-transition: 0.5s ease; 
+  -o-transition: 0.5s ease; 
   transition: 0.5s ease;
 }
 
@@ -168,7 +180,11 @@ header .social-menu a {
 }
 
 .menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -179,7 +195,11 @@ header .social-menu a {
 }
 
 .header-right-menus .social-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 /*=================================
@@ -192,47 +212,58 @@ header .social-menu a {
 /*=================================
   banner section styling starts here
 =================================*/ 
+.banner .slide { position: relative; }
+
+h2 span::first-letter { text-transform: capitalize; }
+
+.banner .uppercase::first-letter { text-transform: capitalize; }
+
+.slide-content p { font: bold 25px 'sans-serif'; }
+
 .banner .wrapper {
   width: 100%;
   text-align: center;
 }
 
-h2{
+h2 {
   padding: 27px 0; 
   background-color: #609;
   color: #fff;
   font: bold 40px 'sans-serif'; 
-  word-spacing: -7px;
-}
-
-.banner .slide {
-  position: relative;
-}
-
-h2 span::first-letter { text-transform: capitalize;}
-
-.banner .uppercase::first-letter {
-  text-transform: capitalize;
 }
 
 .slide-content {
+  width: 84%;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   color: #fff;
-  width: 83%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); 
 }
 
-.slide-content p {
-  font:bold 25px 'sans-serif';
-}
-
-.slide-contentspan {
-  font: normal 18px 'sans-serif';
-  letter-spacing: 2px;
+.slide-content span {
   margin-top: 17px;
   display: block;
+  font: normal 18px 'sans-serif';
+  letter-spacing: 1.5px;  
+}
+
+.slick-dots li.slick-active button:before, .slick-dots li button:before {
+  color: #fff;
+  font-size: 11px;
+}
+
+.slick-dots {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: block;
+  position: absolute;
+  bottom: 15px;  
+  list-style: none;
+  text-align: center;
 }
 /*=================================
   banner section styling ends here
