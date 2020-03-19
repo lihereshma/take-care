@@ -451,6 +451,8 @@ h4 {
   margin-bottom: 27px;
   color: #fff;  
 }
+
+.mobile-img { display: none;}
 /*=================================
   tool section styling ends here
 =================================*/ 
@@ -858,6 +860,8 @@ footer {
 
   .footer-contact p { font-size: 15px; }
 
+  .mail { width: 22%; }
+
   .mail a { font-size: 20px; }
 
   .footer-bottom-menus a , .copyright { font-size: 15px; }
@@ -941,15 +945,23 @@ footer {
 
 /*media query for 767px starts here*/
 @media only screen and (max-width: 767px) {
-  .mail { width: 36%; }
+  h2 { font-size: 28px; }
 
-  .social-links li {
-    width: 8%;
-  }
+  .mail { width: 34%; }
+
+  .social-links li { width: 8%; }
+
+  .footer-logos span { font-size: 17px; }
 } 
 
 /*media query for 540px starts here*/
 @media only screen and (max-width: 540px) {
+  h2 { font-size: 20px; }
+
+  h2 { font-size: 24px; }
+
+  h4 { font-size: 20px; }
+
   .film ul li { width: 70%; }
 
   footer .social-links li { width: 10%; }
@@ -957,6 +969,8 @@ footer {
   .mail { width: 49%; }
 
   .footer-bottom-menus ul li { display: block; }
+
+  .footer-logos span { font-size: 15px; }
 
   .footer-bottom-menus {
     -webkit-box-orient: vertical;
@@ -969,11 +983,24 @@ footer {
 
 /*media query for 340px starts here*/
 @media only screen and (max-width: 340px) {
+
+  h2 { font-size: 12px; }
+
+  h3 { font-size: 20px; }
+
+  h4 { font-size: 16px; }
+
+  .footer-logos span { font-size: 12px; }
+
+  .mail a { font-size: 16px; }
+  
   footer .social-links li { width: 15%; }
 
-  .mail { width: 77%; }
+  .mail { width: 63%; }
 
   .film ul li { width: 90%; }
+  
+  .desktop-img { display: none; }
 
-  /* .tool figure { width: 170%; } */
+  .mobile-img { display: block; }
 }  
