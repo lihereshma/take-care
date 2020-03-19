@@ -211,11 +211,14 @@ header .social-menu a {
 /*=================================
   banner section styling starts here
 =================================*/ 
-.banner .slide { position: relative; }
-
 .banner .uppercase::first-letter,  h2::first-letter { text-transform: capitalize; }
 
 .slide-content p { font: bold 25px 'sans-serif'; }
+
+.banner .slide { 
+  position: relative;
+  outline: none;
+}
 
 .banner .wrapper {
   width: 100%;
@@ -277,8 +280,6 @@ h2 {
 
 .click-video { display: none; }
 
-.activeImage { display: block; }
-
 .section-head { margin: 0 13%; }
 
 .film ul li { width: 48%; }
@@ -320,7 +321,6 @@ h4::first-letter { text-transform: capitalize; }
 }
 
 .lightbox-opened {
-  width:100%;
   padding: 25px;
   display: none;
   position: fixed;
@@ -330,14 +330,27 @@ h4::first-letter { text-transform: capitalize; }
   left: 0;
   background-color: rgba(0,0,0, 0.8);
   cursor: pointer;
+  z-index: 3;
+}
+
+.currentVideo {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 5;
 }
 
 .cancel {
-  padding: 10px;
+  margin: 30px;
   display: inline-block;
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   text-indent: -9999px;
   font-size: 40px;
   cursor: pointer;
@@ -352,17 +365,6 @@ h4::first-letter { text-transform: capitalize; }
   -webkit-transition: 0.5s ease;
   -o-transition: 0.5s ease;
   transition: 0.5s ease;
-}
-
-.currentVideo {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
 }
 
 .film ul {
@@ -400,6 +402,7 @@ h4 {
 
 .blue-button a {
   padding: 10px 2.5%;
+  border: 2px solid #49adf2;
   border-radius: 50px;
   background-color: #49adf2;
   color: #fff;
@@ -408,6 +411,8 @@ h4 {
   -o-transition: 0.5s ease;  
   transition: 0.5s ease;
 }
+
+.activeVideo { display: block; }
 /*=================================
   films section styling ends here
 =================================*/ 
@@ -452,7 +457,10 @@ h4 {
 /*=================================
   campaign section styling starts here
 =================================*/ 
-.campaign .blue-button a { margin-top: 26px; }
+.campaign .blue-button a {
+  border: 2px solid #49adf2;
+  margin-top: 26px; 
+}
 
 .campaign { padding: 74px 0; }
 /*=================================
@@ -682,8 +690,9 @@ footer {
   footer .footer-top-menus a:hover, .footer-bottom-menus a:hover { color: #5bf; }
 
   .blue-button a:hover {
-    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 2px solid #49adf2;
+    background-color: #fff; 
+    color: #49adf2;
   }
 
   .video figure:hover:before {
@@ -708,28 +717,24 @@ footer {
   }
 
   .menu { 
-    width: 100%;
+    width: 0;
     height: 100vh;
+    padding-top: 10%;
     position: absolute; 
     z-index: 1;
     top: 0;
-    left: 100%;
+    left: 110%;
     background-color: #ccc;
     overflow: hidden;
-    -webkit-transition: left 0.5s ease;
-    -o-transition: left 0.5s ease;
-    transition: left 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
   }
-
-  .show { left: 0; }
 
   .menu ul {
     width: 100%;
     position: absolute;
-    top: 50%;
-    left: 50%;
     text-align: center;
-    transform: translate(-50%, -50%);
   }
 
   .menu li { 
@@ -742,6 +747,11 @@ footer {
     color: #000;
     font: bold 20px sans-serif;
     text-transform: capitalize;
+  }
+
+  .show { 
+    width: 100%;
+    left: 0; 
   }
 
   .hamburger {
@@ -775,25 +785,30 @@ footer {
 
   .open .bar-two { 
     background-color: #49adf2; 
-    -webkit-transform: rotate(45deg) translatex(-3px);
-    -ms-transform: rotate(45deg) translatex(-3px);
-    transform: rotate(45deg) translatex(-3px);
+    -webkit-transform: rotate(45deg) translatex(-5px);
+    -ms-transform: rotate(45deg) translatex(-5px);
+    transform: rotate(45deg) translatex(-5px);
   }
 
   .open .bar-three { display: none; }
 
   .open .bar-one { 
     background-color: #49adf2; 
-    -webkit-transform: rotate(-45deg) translatex(-3px);
-    -ms-transform: rotate(-45deg) translatex(-3px);
-    transform: rotate(-45deg) translatex(-3px); 
+    -webkit-transform: rotate(-45deg) translatex(-5px);
+    -ms-transform: rotate(-45deg) translatex(-5px);
+    transform: rotate(-45deg) translatex(-5px); 
+  }
+
+  .show ul {
+    display: flex;
+    flex-direction: column;
   }
 
   .header-right-menus { display: none; }
   /* header section responsive styling ends */
 
   /* main section responsive styling starts */
-  .slider-wrapper { display: none; }
+  .banner-slider { display: none; }
 
   .tool-content { width: 90%; }
 
@@ -926,7 +941,11 @@ footer {
 
 /*media query for 767px starts here*/
 @media only screen and (max-width: 767px) {
-  .mail { width: 34%; }
+  .mail { width: 36%; }
+
+  .social-links li {
+    width: 8%;
+  }
 } 
 
 /*media query for 540px starts here*/
